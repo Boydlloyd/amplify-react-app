@@ -1,1 +1,22 @@
-{}
+{
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-01-16T00:33:49.562Z"
+    }
+  },
+  "auth": {
+    "cognitodb849bfe": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "analytics": {
+    "amplifyreactapp": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}
