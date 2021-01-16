@@ -1,7 +1,36 @@
 {
     "identityPoolName": "amplifyreactapp_identitypool_6cf3e692",
-    "allowUnauthenticatedIdentities": true,
-    "authSelections": "identityPoolOnly",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "cognitfaa385bb",
+    "userPoolName": "cognitodb849bfe_userpool_faa385bb",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "userpoolClientLambdaRole": "cognitfaa385bb_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "authSelections": "identityPoolAndUserPool",
     "resourceName": "cognitodb849bfe",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -14,5 +43,9 @@
             "UnauthRole",
             "Arn"
         ]
-    }
+    },
+    "useDefault": "default",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "dependsOn": []
 }
