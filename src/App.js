@@ -8,16 +8,10 @@ import {useEffect,useState} from 'react';
 
 
 function App() {
-
   const [username,setUsername]=useState('');
   const [todo,setTodo]=useState('');
   const [listTodo,setListTodo]=useState([]);
   const [postedTodo,setPostedTodo]=useState('');
-
-
-  function clearForm(){ 
-    document.getElementById("create-form").reset();
-  }
 
   useEffect(()=>{
     async function getAllTodos(){
@@ -53,6 +47,12 @@ function App() {
     const newTodo=await API.graphql({query:mutations.createTodo, variables:{input:todoDetails}})
     setPostedTodo(newTodo);
     clearForm();
+
+
+    function clearForm(){ 
+      document.getElementById("create-form").reset();
+    }
+
   }
 
 
